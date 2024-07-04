@@ -1,5 +1,6 @@
 package com.nageoffer.shortlink.admin.controller;
 
+import com.nageoffer.shortlink.admin.common.convention.result.Result;
 import com.nageoffer.shortlink.admin.dto.resp.UserRespDTO;
 import com.nageoffer.shortlink.admin.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -20,7 +21,12 @@ public class UserController {
      * @return
      */
     @GetMapping("/api/shortlink/v1/user/{username}")
-    public UserRespDTO getUserByUsername(@PathVariable("username") String username){
-        return userService.getUserByUsername(username);
+    public Result<UserRespDTO> getUserByUsername(@PathVariable("username") String username){
+        UserRespDTO result=userService.getUserByUsername(username);
+        if(result==null){
+            return new Result<UserRespDTO>().setCode("-1").setMessage("用户查询为空");
+        }else{
+            return new Result<UserRespDTO>().setCode("0").setData(result);
+        }
     }
 }
