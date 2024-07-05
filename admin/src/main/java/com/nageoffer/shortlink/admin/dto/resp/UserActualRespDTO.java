@@ -12,10 +12,6 @@ import lombok.Data;
 @Data
 public class UserActualRespDTO {
     /**
-     * ID
-     */
-    private Long id;
-    /**
      * 用户名
      */
     private String username;
