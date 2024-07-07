@@ -89,8 +89,20 @@ public class UserController {
      * @param token
      * @return
      */
-    @GetMapping("/user/login/check-login")
+    @GetMapping("/user/check-login")
     public Result<Boolean> checkLogin(@RequestParam("username") String username,@RequestParam("token") String token){
         return Results.success(userService.checkLogin(username,token));
+    }
+
+    /**
+     * 退出登录
+     * @param username
+     * @param token
+     * @return
+     */
+    @DeleteMapping("/user/logout")
+    public Result<Void> logout(@RequestParam("username") String username,@RequestParam("token") String token){
+        userService.logout(username,token);
+        return Results.success();
     }
 }
