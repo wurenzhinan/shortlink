@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2a196d2-3d52-43df-ae99-6685e37f2bb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/dto/req/ShortLinkGroupSaveReqDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/tookit/RandomStringGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/dto/resp/ShortLinkGroupRespDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/controller/GroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/controller/GroupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/dao/entity/GroupDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/dao/entity/GroupDO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/service/GroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/service/GroupService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/service/impl/GroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/service/impl/GroupServiceImpl.java" afterDir="false" />
     </list>
@@ -178,7 +176,7 @@
       <workItem from="1720419295410" duration="729000" />
       <workItem from="1720494254836" duration="43000" />
       <workItem from="1720499437139" duration="1840000" />
-      <workItem from="1720504840438" duration="3809000" />
+      <workItem from="1720504840438" duration="5480000" />
     </task>
     <task id="LOCAL-00001" summary="feature:开发全局异常拦截器">
       <option name="closed" value="true" />
@@ -244,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720506545820</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feature:开发短链接后管分组新增功能">
+      <option name="closed" value="true" />
+      <created>1720508946769</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1720508946769</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +266,7 @@
     <MESSAGE value="feature:修改用户信息功能" />
     <MESSAGE value="feature:用户登录功能功能" />
     <MESSAGE value="feature:初始化短链接分组功能代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature:初始化短链接分组功能代码" />
+    <MESSAGE value="feature:开发短链接后管分组新增功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature:开发短链接后管分组新增功能" />
   </component>
 </project>
