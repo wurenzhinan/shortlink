@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2a196d2-3d52-43df-ae99-6685e37f2bb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/dto/resp/ShortLinkGroupRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/common/biz/user/UserContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/common/biz/user/UserInfoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/common/biz/user/UserTransmitFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/config/UserConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/controller/GroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/controller/GroupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/service/GroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/service/GroupService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/service/impl/GroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/service/impl/GroupServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,42 +43,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.UserTableShardingTest.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ShortLinkAdminApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ShortLinkGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ShortLinkProjectApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/nageoffer/shortlink/admin/src/main/java/com/nageoffer/shortlink/admin/dao&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.UserTableShardingTest.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ShortLinkAdminApplication.executor": "Debug",
+    "Spring Boot.ShortLinkGatewayApplication.executor": "Run",
+    "Spring Boot.ShortLinkProjectApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/nageoffer/shortlink/admin/src/main/java/com/nageoffer/shortlink/admin/dao",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "editor.preferences.import",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\nageoffer\shortlink\gateway\src\main\java\com\nageoffer\shortlink\gateway" />
@@ -176,7 +180,7 @@
       <workItem from="1720419295410" duration="729000" />
       <workItem from="1720494254836" duration="43000" />
       <workItem from="1720499437139" duration="1840000" />
-      <workItem from="1720504840438" duration="5480000" />
+      <workItem from="1720504840438" duration="8823000" />
     </task>
     <task id="LOCAL-00001" summary="feature:开发全局异常拦截器">
       <option name="closed" value="true" />
@@ -250,7 +254,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720508946769</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feature:开发短链接后管分组集合功能">
+      <option name="closed" value="true" />
+      <created>1720510559067</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1720510559067</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +279,7 @@
     <MESSAGE value="feature:用户登录功能功能" />
     <MESSAGE value="feature:初始化短链接分组功能代码" />
     <MESSAGE value="feature:开发短链接后管分组新增功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature:开发短链接后管分组新增功能" />
+    <MESSAGE value="feature:开发短链接后管分组集合功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature:开发短链接后管分组集合功能" />
   </component>
 </project>
