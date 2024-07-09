@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2a196d2-3d52-43df-ae99-6685e37f2bb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/common/biz/user/UserContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/common/biz/user/UserInfoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/common/biz/user/UserTransmitFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/config/UserConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/dto/req/ShortLinkGroupUpdateReqDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/common/biz/user/UserTransmitFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/common/biz/user/UserTransmitFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/controller/GroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/controller/GroupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/dto/req/ShortLinkGroupSaveReqDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/dto/req/ShortLinkGroupSaveReqDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/service/GroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/service/GroupService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/service/impl/GroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/service/impl/GroupServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +55,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ShortLinkAdminApplication.executor": "Debug",
+    "Spring Boot.ShortLinkAdminApplication.executor": "Run",
     "Spring Boot.ShortLinkGatewayApplication.executor": "Run",
     "Spring Boot.ShortLinkProjectApplication.executor": "Run",
     "git-widget-placeholder": "master",
@@ -180,7 +181,7 @@
       <workItem from="1720419295410" duration="729000" />
       <workItem from="1720494254836" duration="43000" />
       <workItem from="1720499437139" duration="1840000" />
-      <workItem from="1720504840438" duration="8823000" />
+      <workItem from="1720504840438" duration="11623000" />
     </task>
     <task id="LOCAL-00001" summary="feature:开发全局异常拦截器">
       <option name="closed" value="true" />
@@ -262,7 +263,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720510559067</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feature:开发短链接后管系统登录时间修改为30天">
+      <option name="closed" value="true" />
+      <created>1720514264548</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1720514264548</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feature:开发短链接后管系统用户上下文封装">
+      <option name="closed" value="true" />
+      <created>1720514292783</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1720514292783</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,6 +297,8 @@
     <MESSAGE value="feature:初始化短链接分组功能代码" />
     <MESSAGE value="feature:开发短链接后管分组新增功能" />
     <MESSAGE value="feature:开发短链接后管分组集合功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature:开发短链接后管分组集合功能" />
+    <MESSAGE value="feature:开发短链接后管系统登录时间修改为30天" />
+    <MESSAGE value="feature:开发短链接后管系统用户上下文封装" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature:开发短链接后管系统用户上下文封装" />
   </component>
 </project>
