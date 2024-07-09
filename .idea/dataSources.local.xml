@@ -5,7 +5,6 @@
       <database-info product="MySQL" version="8.0.36" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0)" dbms="MYSQL" exact-version="8.0.36" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
-        <jdbc-catalog-is-schema>true</jdbc-catalog-is-schema>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
@@ -15,6 +14,14 @@
           <node kind="schema" qname="link" />
         </introspection-scope>
       </schema-mapping>
+    </data-source>
+    <data-source name="0@127.0.0.1" uuid="7718c91c-7da1-4dd4-bace-a173a2ba8df2">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="REDIS" />
+      <schema-mapping />
+    </data-source>
+    <data-source name="unknown" uuid="d6726e6f-0922-4607-99c4-3c41c58e3245">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="UNKNOWN" />
+      <schema-mapping />
     </data-source>
   </component>
 </project>
