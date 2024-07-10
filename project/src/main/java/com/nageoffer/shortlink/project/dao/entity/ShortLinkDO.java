@@ -55,6 +55,10 @@ public class ShortLinkDO extends BaseDO {
     private String gid;
 
     /**
+     * 网站图标
+     */
+    private String favicon;
+    /**
     * 启用标识 0：未启用 1：已启用
     */
     private int enableStatus;
@@ -79,14 +83,4 @@ public class ShortLinkDO extends BaseDO {
     */
     @TableField("`describe`")
     private String describe;
-
-    /**
-    * 创建时间
-    */
-    private Date createTime;
-
-    /**
-    * 修改时间
-    */
-    private Date updateTime;
 }
