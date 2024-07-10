@@ -47,7 +47,7 @@ public class UserController {
      * @param username
      * @return
      */
-    @GetMapping("/user/hash-username")
+    @GetMapping("/user/has-username")
     public Result<Boolean> hasUsername(@RequestParam("username") String username){
         return Results.success(userService.hashUsername(username));
     }
