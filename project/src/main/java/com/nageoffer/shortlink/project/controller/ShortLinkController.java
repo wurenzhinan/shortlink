@@ -10,9 +10,13 @@ import com.nageoffer.shortlink.project.dto.resp.ShortLinkCreateRespDTO;
 import com.nageoffer.shortlink.project.dto.resp.ShortLinkGroupCountQueryRespDTO;
 import com.nageoffer.shortlink.project.dto.resp.ShortLinkPageRespDTO;
 import com.nageoffer.shortlink.project.service.ShortLinkService;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -21,7 +25,6 @@ import java.util.List;
  **/
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/short-link/v1/")
 public class ShortLinkController {
     private final ShortLinkService shortLinkService;
 
@@ -30,7 +33,7 @@ public class ShortLinkController {
      * @param requestParam
      * @return
      */
-    @PostMapping("create")
+    @PostMapping("/api/short-link/v1/create")
     public Result<ShortLinkCreateRespDTO> createShortLink(@RequestBody ShortLinkCreateReqDTO requestParam){
         return Results.success(shortLinkService.createShortLink(requestParam));
     }
@@ -40,7 +43,7 @@ public class ShortLinkController {
      * @param requestParam
      * @return
      */
-    @GetMapping("page")
+    @GetMapping("/api/short-link/v1/page")
     public Result<IPage<ShortLinkPageRespDTO>> pageShortLink(ShortLinkPageReqDTO requestParam){
         return Results.success(shortLinkService.pageShortLink(requestParam));
     }
@@ -50,7 +53,7 @@ public class ShortLinkController {
      * @param requestParam
      * @return
      */
-    @GetMapping("count")
+    @GetMapping("/api/short-link/v1/count")
     public Result<List<ShortLinkGroupCountQueryRespDTO>> listGroupShortLinkCount(@RequestParam("requestParam") List<String> requestParam){
         return Results.success(shortLinkService.listGroupShortLinkCount(requestParam));
     }
@@ -60,9 +63,22 @@ public class ShortLinkController {
      * @param requestParam
      * @return
      */
-    @PostMapping("update")
+    @PostMapping("/api/short-link/v1/update")
     public Result<Void> updateShortLink(@RequestBody ShortLinkUpdateReqDTO requestParam){
         return Results.success(shortLinkService.updateShortLink(requestParam));
+    }
+
+    /**
+     * 短链接跳转到原始链接
+     * @param shortUrl
+     * @param request
+     * @param response
+     * @return
+     */
+    @GetMapping("/{short-url}")
+    public ResponseEntity<Void> restoreUrl(@PathVariable("short-url") String shortUrl, ServletRequest request, ServletResponse response) throws IOException {
+        shortLinkService.restoreUrl(shortUrl,request,response);
+        return null;
     }
 
 }
