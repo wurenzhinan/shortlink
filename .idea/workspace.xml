@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2a196d2-3d52-43df-ae99-6685e37f2bb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/controller/ShortLinkController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dao/ShortLinkDO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/ShortLinkRemoteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/req/ShortLinkCreateReqDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/req/ShortLinkPageReqDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/resp/ShortLinkCreateRespDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/resp/ShortLinkPageRespDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/shardingsphere-config-dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/shardingsphere-config-dev.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/test/java/com/nageoffer/shortlink/admin/test/UserTableShardingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/test/java/com/nageoffer/shortlink/admin/test/UserTableShardingTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +58,7 @@
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/nageoffer/shortlink/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/resp",
+    "last_opened_file_path": "D:/nageoffer/shortlink/admin/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -87,11 +82,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\nageoffer\shortlink\admin\src\main\resources" />
       <recent name="D:\nageoffer\shortlink\admin\src\main\java\com\nageoffer\shortlink\admin\remote\dto\resp" />
       <recent name="D:\nageoffer\shortlink\admin\src\main\java\com\nageoffer\shortlink\admin\remote\dto" />
       <recent name="D:\nageoffer\shortlink\project\src\main\resources" />
       <recent name="D:\nageoffer\shortlink\project\src\main\java\com\nageoffer\shortlink\project\common" />
-      <recent name="D:\nageoffer\shortlink\gateway\src\main\java\com\nageoffer\shortlink\gateway" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.nageoffer.shortlink.admin.remote.dao" />
@@ -179,9 +174,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ShortLinkAdminApplication" />
+        <item itemvalue="Application.UserTableShardingTest" />
         <item itemvalue="Spring Boot.ShortLinkProjectApplication" />
         <item itemvalue="Application.ShortLinkTableShardingTest" />
-        <item itemvalue="Application.UserTableShardingTest" />
         <item itemvalue="Spring Boot.ShortLinkGatewayApplication" />
       </list>
     </recent_temporary>
@@ -203,7 +198,7 @@
       <workItem from="1720504840438" duration="13301000" />
       <workItem from="1720573954241" duration="11489000" />
       <workItem from="1720596839944" duration="6465000" />
-      <workItem from="1720660172285" duration="3874000" />
+      <workItem from="1720660172285" duration="6371000" />
     </task>
     <task id="LOCAL-00001" summary="feature:开发全局异常拦截器">
       <option name="closed" value="true" />
@@ -381,7 +376,31 @@
       <option name="project" value="LOCAL" />
       <updated>1720661286622</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="feature:短链接后管系统调用中台相关接口">
+      <option name="closed" value="true" />
+      <created>1720664282990</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1720664282990</updated>
+    </task>
+    <task id="LOCAL-00024" summary="feature:开发服务端部署短链接项目数据库配置变更">
+      <option name="closed" value="true" />
+      <created>1720665048685</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1720665048685</updated>
+    </task>
+    <task id="LOCAL-00025" summary="feature:优化用户注册重复提示报错">
+      <option name="closed" value="true" />
+      <created>1720666259361</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1720666259361</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,6 +430,9 @@
     <MESSAGE value="feature:提交MySQL数据库分页插件" />
     <MESSAGE value="feature:开发短链接分页查询功能" />
     <MESSAGE value="feature:短链接分页新增创建时间，并序列化时间" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature:短链接分页新增创建时间，并序列化时间" />
+    <MESSAGE value="feature:短链接后管系统调用中台相关接口" />
+    <MESSAGE value="feature:开发服务端部署短链接项目数据库配置变更" />
+    <MESSAGE value="feature:优化用户注册重复提示报错" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature:优化用户注册重复提示报错" />
   </component>
 </project>
