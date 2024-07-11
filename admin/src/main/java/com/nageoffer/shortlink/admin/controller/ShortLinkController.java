@@ -45,7 +45,7 @@ public class ShortLinkController {
      * @param requestParam
      * @return
      */
-    @PutMapping("update")
+    @PostMapping("update")
     public Result<Void> updateShortLink(@RequestBody ShortLinkUpdateReqDTO requestParam){
         return shortLinkRemoteService.updateShortLink(requestParam);
     }
