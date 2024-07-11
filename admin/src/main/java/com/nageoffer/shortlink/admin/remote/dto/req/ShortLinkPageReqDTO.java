@@ -1,7 +1,6 @@
 package com.nageoffer.shortlink.admin.remote.dto.req;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.nageoffer.shortlink.admin.remote.dao.ShortLinkDO;
 import lombok.Data;
 
 /**
@@ -9,7 +8,7 @@ import lombok.Data;
  * 类描述： ShortLinkPageReqDTO
  **/
 @Data
-public class ShortLinkPageReqDTO extends Page<ShortLinkDO> {
+public class ShortLinkPageReqDTO extends Page{
     /**
      * 分组标识
      */
