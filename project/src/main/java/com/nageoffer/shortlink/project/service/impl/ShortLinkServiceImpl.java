@@ -29,6 +29,9 @@ import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.redisson.api.RBloomFilter;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
@@ -38,6 +41,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -66,13 +71,14 @@ public class ShortLinkServiceImpl extends ServiceImpl<ShortLinkMapper, ShortLink
      * @return
      */
     @Override
-    public ShortLinkCreateRespDTO createShortLink(ShortLinkCreateReqDTO requestParam) {
+    public ShortLinkCreateRespDTO createShortLink(ShortLinkCreateReqDTO requestParam) throws IOException {
         String shortLinkSuffix=generateSuffix(requestParam);
         String fullShortUrl=requestParam.getDomain()+"/"+shortLinkSuffix;
         ShortLinkDO shortLinkDO=ShortLinkDO.builder()
                 .domain(requestParam.getDomain())
                 .originUrl(requestParam.getOriginUrl())
                 .gid(requestParam.getGid())
+                .favicon(getFavicon(requestParam.getOriginUrl()))
                 .createdType(requestParam.getCreatedType())
                 .validDateType(requestParam.getValidDateType())
                 .validDate(requestParam.getValidDate())
@@ -302,5 +308,47 @@ public class ShortLinkServiceImpl extends ServiceImpl<ShortLinkMapper, ShortLink
             customGenerateCount++;
         }
         return shortUri;
+    }
+
+    /**
+     * 获取目标网站图标
+     * @param url
+     * @return
+     * @throws IOException
+     */
+    private String getFavicon(String url) throws IOException {
+        //创建URL对象
+        URL targetUrl = new URL(url);
+        //打开连接
+        HttpURLConnection connection = (HttpURLConnection) targetUrl.openConnection();
+        // 禁止自动处理重定向
+        connection.setInstanceFollowRedirects(false);
+        // 设置请求方法为GET
+        connection.setRequestMethod("GET");
+        //连接
+        connection.connect();
+        //获取响应码
+        int responseCode = connection.getResponseCode();
+        if (responseCode == HttpURLConnection.HTTP_MOVED_PERM || responseCode == HttpURLConnection.HTTP_MOVED_TEMP) {
+            //获取重定向的URL
+            String redirectUrl = connection.getHeaderField("Location");
+            //如果重定向URL不为空
+            if (redirectUrl != null) {
+                // 创建新的URL对象
+                URL newUrl = new URL(redirectUrl);//打开新的连接
+                connection = (HttpURLConnection) newUrl.openConnection();//设置请求方法为GET
+                connection.setRequestMethod("GET");//连接
+                connection.connect();//获取新的响应码
+                responseCode = connection.getResponseCode();
+            }
+        }
+        if(HttpURLConnection.HTTP_OK==responseCode){
+            Document document = Jsoup.connect(url).get();
+            Element faviconLink = document.select("link[rel~=(?i)^(shortcut )?icon]").first();
+            if(faviconLink!=null){
+                return faviconLink.attr("abs:href");
+            }
+        }
+        return null;
     }
 }

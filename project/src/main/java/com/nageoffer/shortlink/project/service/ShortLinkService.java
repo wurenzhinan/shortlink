@@ -24,7 +24,7 @@ public interface ShortLinkService extends IService<ShortLinkDO> {
      * @param requestParam
      * @return
      */
-    ShortLinkCreateRespDTO createShortLink(ShortLinkCreateReqDTO requestParam);
+    ShortLinkCreateRespDTO createShortLink(ShortLinkCreateReqDTO requestParam) throws IOException;
 
     /**
      * 分页查询短链接
