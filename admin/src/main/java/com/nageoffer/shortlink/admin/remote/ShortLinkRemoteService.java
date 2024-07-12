@@ -5,7 +5,7 @@ import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.TypeReference;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.nageoffer.shortlink.admin.common.convention.result.Result;
-import com.nageoffer.shortlink.admin.common.convention.result.Results;
+import com.nageoffer.shortlink.admin.remote.dto.req.RecycleBinSaveReqDTO;
 import com.nageoffer.shortlink.admin.remote.dto.req.ShortLinkCreateReqDTO;
 import com.nageoffer.shortlink.admin.remote.dto.req.ShortLinkPageReqDTO;
 import com.nageoffer.shortlink.admin.remote.dto.req.ShortLinkUpdateReqDTO;
@@ -61,9 +61,8 @@ public interface ShortLinkRemoteService {
      * @param requestParam
      * @return
      */
-    default Result<Void> updateShortLink(ShortLinkUpdateReqDTO requestParam){
+    default void updateShortLink(ShortLinkUpdateReqDTO requestParam){
         HttpUtil.post("http://127.0.0.1:8001/api/short-link/v1/update", JSON.toJSONString(requestParam));
-        return Results.success();
     }
 
     /**
@@ -74,5 +73,13 @@ public interface ShortLinkRemoteService {
     default String getTitleByUrl(String url){
         String tilte = HttpUtil.get("http://127.0.0.1:8001/api/short-link/v1/title?url=" + url);
         return JSON.parseObject(tilte, new TypeReference<>() {});
+    }
+
+    /**
+     * 保存回收站
+     * @param requestParam
+     */
+    default void saveRecycleBin(RecycleBinSaveReqDTO requestParam){
+        HttpUtil.post("http://127.0.0.1:8001/api/short-link/v1/recycle-bin/save", JSON.toJSONString(requestParam));
     }
 }

@@ -105,11 +105,10 @@ public class ShortLinkServiceImpl extends ServiceImpl<ShortLinkMapper, ShortLink
                 throw new ServiceException("短链接生成重复");
             }
         }
-        stringRedisTemplate.opsForValue()
-                .set(
-                        String.format(GOTO_SHORT_LINK_KEY,fullShortUrl),
-                        requestParam.getOriginUrl(),
-                        LinkUtil.getLinkCacheValidTime(requestParam.getValidDate()),TimeUnit.MILLISECONDS);
+        stringRedisTemplate.opsForValue().set(
+                String.format(GOTO_SHORT_LINK_KEY,fullShortUrl),
+                requestParam.getOriginUrl(),
+                LinkUtil.getLinkCacheValidTime(requestParam.getValidDate()),TimeUnit.MILLISECONDS);
         shortUriCreateCachePenetrationBloomFilter.add(fullShortUrl);
         return ShortLinkCreateRespDTO.builder()
                 .fullShortUrl("http://"+shortLinkDO.getFullShortUrl())
@@ -265,20 +264,17 @@ public class ShortLinkServiceImpl extends ServiceImpl<ShortLinkMapper, ShortLink
                     .eq(ShortLinkDO::getDelFlag, 0)
                     .eq(ShortLinkDO::getEnableStatus, 0);
             ShortLinkDO shortLinkDO=baseMapper.selectOne(queryWrapper);
-            if(shortLinkDO!=null){
-                if(shortLinkDO.getValidDate()!=null&&shortLinkDO.getValidDate().before(new Date())){
-                    //如果缓存有效期已经失效了，就当作没有DO一样处理
-                    stringRedisTemplate.opsForValue().set(String.format(GOTO_IS_NULL_SHORT_LINK_KEY,fullShortUrl),"-",30, TimeUnit.MINUTES);
-                    ((HttpServletResponse) response).sendRedirect("/page/notfound");
-                    return;
-                }
-                stringRedisTemplate.opsForValue()
-                        .set(
-                                String.format(GOTO_SHORT_LINK_KEY,fullShortUrl),
-                                shortLinkDO.getOriginUrl(),
-                                LinkUtil.getLinkCacheValidTime(shortLinkDO.getValidDate()),TimeUnit.MILLISECONDS);
-                ((HttpServletResponse) response).sendRedirect(shortLinkDO.getOriginUrl());
+            if(shortLinkDO==null||shortLinkDO.getValidDate().before(new Date())){
+                //如果缓存有效期已经失效了，就当作没有DO一样处理
+                stringRedisTemplate.opsForValue().set(String.format(GOTO_IS_NULL_SHORT_LINK_KEY,fullShortUrl),"-",30, TimeUnit.MINUTES);
+                ((HttpServletResponse) response).sendRedirect("/page/notfound");
             }
+            stringRedisTemplate.opsForValue()
+                    .set(
+                            String.format(GOTO_SHORT_LINK_KEY,fullShortUrl),
+                            shortLinkDO.getOriginUrl(),
+                            LinkUtil.getLinkCacheValidTime(shortLinkDO.getValidDate()),TimeUnit.MILLISECONDS);
+            ((HttpServletResponse) response).sendRedirect(shortLinkDO.getOriginUrl());
         }finally {
             lock.unlock();
         }
