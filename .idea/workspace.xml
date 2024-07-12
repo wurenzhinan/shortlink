@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2a196d2-3d52-43df-ae99-6685e37f2bb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/controller/ShortLinkNotFoundController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/resources/templates/notfound.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/controller/UrlTitleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/controller/UrlTitleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/UrlTitleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/UrlTitleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/ShortLinkRemoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/ShortLinkRemoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/ShortLinkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/ShortLinkServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +61,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.ShortLinkAdminApplication.executor": "Run",
     "Spring Boot.ShortLinkGatewayApplication.executor": "Run",
-    "Spring Boot.ShortLinkProjectApplication.executor": "Debug",
+    "Spring Boot.ShortLinkProjectApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
@@ -93,11 +96,11 @@
       <recent name="D:\nageoffer\shortlink\project\src\main\java\com\nageoffer\shortlink\project\common" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.nageoffer.shortlink.admin.controller" />
       <recent name="com.nageoffer.shortlink.admin.remote.dto.req" />
       <recent name="com.nageoffer.shortlink.admin.remote.dto.resp" />
       <recent name="com.nageoffer.shortlink.admin.remote.dao" />
       <recent name="com.nageoffer.shortlink.admin.config" />
-      <recent name="com.nageoffer.shortlink.project.test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -109,7 +112,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ShortLinkProjectApplication">
+  <component name="RunManager" selected="Spring Boot.ShortLinkAdminApplication">
     <configuration name="ShortLinkTableShardingTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.nageoffer.shortlink.project.test.ShortLinkTableShardingTest" />
       <module name="shortlink-project" />
@@ -177,8 +180,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ShortLinkProjectApplication" />
         <item itemvalue="Spring Boot.ShortLinkAdminApplication" />
+        <item itemvalue="Spring Boot.ShortLinkProjectApplication" />
         <item itemvalue="Application.ShortLinkTableShardingTest" />
         <item itemvalue="Application.UserTableShardingTest" />
         <item itemvalue="Spring Boot.ShortLinkGatewayApplication" />
@@ -203,7 +206,8 @@
       <workItem from="1720573954241" duration="11489000" />
       <workItem from="1720596839944" duration="6465000" />
       <workItem from="1720660172285" duration="24172000" />
-      <workItem from="1720746654834" duration="7700000" />
+      <workItem from="1720746654834" duration="9747000" />
+      <workItem from="1720757828146" duration="676000" />
     </task>
     <task id="LOCAL-00001" summary="feature:开发全局异常拦截器">
       <option name="closed" value="true" />
@@ -533,7 +537,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720753548490</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="refactor:重构短链接不存在跳转提示页面">
+      <option name="closed" value="true" />
+      <created>1720754732422</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1720754732422</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,7 +553,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feature:开发用户登录验证拦截器返回友好提示信息" />
     <MESSAGE value="feature:增加项目打包插件" />
     <MESSAGE value="feature:开发短链接新增功能" />
     <MESSAGE value="feature:提交MySQL数据库分页插件" />
@@ -566,22 +577,7 @@
     <MESSAGE value="feature:短链接创建进行缓存预热" />
     <MESSAGE value="refactor:修改短链接工具类的错误" />
     <MESSAGE value="refactor:短链接预热" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor:短链接预热" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/ShortLinkServiceImpl.java</url>
-          <line>262</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/ShortLinkServiceImpl.java</url>
-          <line>260</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="refactor:重构短链接不存在跳转提示页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor:重构短链接不存在跳转提示页面" />
   </component>
 </project>
