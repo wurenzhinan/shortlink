@@ -223,11 +223,14 @@ public class ShortLinkServiceImpl extends ServiceImpl<ShortLinkMapper, ShortLink
             return;
         }
         boolean contains=shortUriCreateCachePenetrationBloomFilter.contains(fullShortUrl);
+        //布隆过滤器不存在，则一定不存在数据库中，需要重定向到未找到页面
         if(!contains){
+            ((HttpServletResponse) response).sendRedirect("/page/notfound");
             return;
         }
         String gotoIsNUllShortLink=stringRedisTemplate.opsForValue().get(String.format(GOTO_IS_NULL_SHORT_LINK_KEY,fullShortUrl));
         if(StrUtil.isNotBlank(gotoIsNUllShortLink)){
+            ((HttpServletResponse) response).sendRedirect("/page/notfound");
             return;
         }
         //分布式锁
@@ -244,8 +247,9 @@ public class ShortLinkServiceImpl extends ServiceImpl<ShortLinkMapper, ShortLink
                     .eq(ShortLinkGotoDO::getFullShortUrl, fullShortUrl);
             ShortLinkGotoDO shortLinkGotoDO = shortLinkGotoMapper.selectOne(linkGotoQueryWrapper);
             if(shortLinkGotoDO==null){
+                //风控
                 stringRedisTemplate.opsForValue().set(String.format(GOTO_IS_NULL_SHORT_LINK_KEY,fullShortUrl),"-",30, TimeUnit.MINUTES);
-                //从严格意义上此处需要风控
+                ((HttpServletResponse) response).sendRedirect("/page/notfound");
                 return;
             }
             //根据路由的gid查短链接，从而定向到原始链接
@@ -259,6 +263,7 @@ public class ShortLinkServiceImpl extends ServiceImpl<ShortLinkMapper, ShortLink
                 if(shortLinkDO.getValidDate()!=null&&shortLinkDO.getValidDate().before(new Date())){
                     //如果缓存有效期已经失效了，就当作没有DO一样处理
                     stringRedisTemplate.opsForValue().set(String.format(GOTO_IS_NULL_SHORT_LINK_KEY,fullShortUrl),"-",30, TimeUnit.MINUTES);
+                    ((HttpServletResponse) response).sendRedirect("/page/notfound");
                     return;
                 }
                 stringRedisTemplate.opsForValue()
