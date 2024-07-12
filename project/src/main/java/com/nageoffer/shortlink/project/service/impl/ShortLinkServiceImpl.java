@@ -233,6 +233,7 @@ public class ShortLinkServiceImpl extends ServiceImpl<ShortLinkMapper, ShortLink
             ((HttpServletResponse) response).sendRedirect("/page/notfound");
             return;
         }
+        //GOTO_IS_NULL_SHORT_LINK_KEY是一个空白的key，用来防止缓存穿透
         String gotoIsNUllShortLink=stringRedisTemplate.opsForValue().get(String.format(GOTO_IS_NULL_SHORT_LINK_KEY,fullShortUrl));
         if(StrUtil.isNotBlank(gotoIsNUllShortLink)){
             ((HttpServletResponse) response).sendRedirect("/page/notfound");
