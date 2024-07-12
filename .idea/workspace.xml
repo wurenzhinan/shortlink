@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2a196d2-3d52-43df-ae99-6685e37f2bb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/common/constant/RedisKeyConstant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/common/constant/RedisKeyConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/common/constant/RedisKeyConstant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/ShortLinkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/ShortLinkServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -175,8 +174,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ShortLinkAdminApplication" />
         <item itemvalue="Spring Boot.ShortLinkProjectApplication" />
+        <item itemvalue="Spring Boot.ShortLinkAdminApplication" />
         <item itemvalue="Application.ShortLinkTableShardingTest" />
         <item itemvalue="Application.UserTableShardingTest" />
         <item itemvalue="Spring Boot.ShortLinkGatewayApplication" />
@@ -201,7 +200,7 @@
       <workItem from="1720573954241" duration="11489000" />
       <workItem from="1720596839944" duration="6465000" />
       <workItem from="1720660172285" duration="24172000" />
-      <workItem from="1720746654834" duration="1952000" />
+      <workItem from="1720746654834" duration="4124000" />
     </task>
     <task id="LOCAL-00001" summary="feature:开发全局异常拦截器">
       <option name="closed" value="true" />
@@ -491,7 +490,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720690653311</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="feature:短链接跳转原始链接开发缓存穿透功能">
+      <option name="closed" value="true" />
+      <created>1720748878083</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1720748878084</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +506,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feature:开发短链接后管系统用户上下文封装" />
     <MESSAGE value="feature:开发短链接后管修改短链接分组功能" />
     <MESSAGE value="refactor:重构短链接后管系统基础路径" />
     <MESSAGE value="feature:开发短链接后管短链接分组删除功能" />
@@ -524,6 +530,7 @@
     <MESSAGE value="feature:短链接后管开发短链接修改功能" />
     <MESSAGE value="feature:修改短链接接口网络方法类型" />
     <MESSAGE value="feature:开发短链接跳转功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature:开发短链接跳转功能" />
+    <MESSAGE value="feature:短链接跳转原始链接开发缓存穿透功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature:短链接跳转原始链接开发缓存穿透功能" />
   </component>
 </project>
