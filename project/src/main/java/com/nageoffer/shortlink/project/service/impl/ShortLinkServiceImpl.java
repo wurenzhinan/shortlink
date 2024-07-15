@@ -291,7 +291,7 @@ public class ShortLinkServiceImpl extends ServiceImpl<ShortLinkMapper, ShortLink
         }
 
     }
-
+    //监控
     private void shortLinkStats(String fullShortUrl,String gid,ServletRequest request, ServletResponse response){
         AtomicBoolean uvFirstFlag=new AtomicBoolean();
         Cookie[] cookies = ((HttpServletRequest) request).getCookies();
@@ -311,12 +311,16 @@ public class ShortLinkServiceImpl extends ServiceImpl<ShortLinkMapper, ShortLink
                         .findFirst()
                         .map(Cookie::getValue)
                         .ifPresentOrElse(each->{
-                            Long added=stringRedisTemplate.opsForSet().add("short-link:stats:uv:"+fullShortUrl,each);
-                            uvFirstFlag.set(added!=null&&added>0L);
+                            Long uvAdded=stringRedisTemplate.opsForSet().add("short-link:stats:uv:"+fullShortUrl,each);
+                            uvFirstFlag.set(uvAdded!=null&&uvAdded>0L);
                         },addRespronseCookieTask);
             }else{
                 addRespronseCookieTask.run();
             }
+            String remoteAddr=LinkUtil.getIp((HttpServletRequest) request);
+            Long uipAdded = stringRedisTemplate.opsForSet().add("short-link:stats:uip:" + fullShortUrl, remoteAddr);
+            //uipAdded 的返回值是一个 Long 类型的值，表示成功添加到集合中的新元素的数量，而 uipFirstFlag 则用于判断 remoteAddr 是否是首次被添加到集合中。
+            boolean uipFirstFlag=uipAdded!=null&&uipAdded>0L;
             if(StrUtil.isBlank(gid)){
                 LambdaQueryWrapper<ShortLinkGotoDO> queryWrapper = Wrappers.lambdaQuery(ShortLinkGotoDO.class)
                         .eq(ShortLinkGotoDO::getFullShortUrl, fullShortUrl);
@@ -329,7 +333,7 @@ public class ShortLinkServiceImpl extends ServiceImpl<ShortLinkMapper, ShortLink
             LinkAccessStatsDO linkAccessStatsDO = LinkAccessStatsDO.builder()
                     .pv(1)
                     .uv(uvFirstFlag.get()?1:0)
-                    .uip(1)
+                    .uip(uipFirstFlag?1:0)
                     .hour(hour)
                     .weekday(weekValue)
                     .fullShortUrl(fullShortUrl)
