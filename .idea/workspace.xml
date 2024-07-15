@@ -5,13 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2a196d2-3d52-43df-ae99-6685e37f2bb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/entity/LinkNetworkStatsDO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkNetworkStatsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3a443c87-7ea0-497f-bfb2-8d4333182f45.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3a443c87-7ea0-497f-bfb2-8d4333182f45.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/controller/ShortLinkStatsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/req/ShortLinkGroupStatsAccessRecordReqDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/req/ShortLinkGroupStatsReqDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/req/ShortLinkStatsAccessRecordReqDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/req/ShortLinkStatsReqDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/resp/ShortLinkStatsAccessDailyRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/resp/ShortLinkStatsAccessRecordRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/resp/ShortLinkStatsBrowserRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/resp/ShortLinkStatsDeviceRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/resp/ShortLinkStatsLocaleCNRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/resp/ShortLinkStatsNetworkRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/resp/ShortLinkStatsOsRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/resp/ShortLinkStatsRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/resp/ShortLinkStatsTopIpRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/dto/resp/ShortLinkStatsUvRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/common/biz/user/UserContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/common/biz/user/UserInfoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/common/biz/user/UserTransmitFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/controller/ShortLinkStatsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/entity/GroupDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkGroupMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dto/biz/ShortLinkStatsRecordDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dto/req/ShortLinkGroupStatsAccessRecordReqDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dto/req/ShortLinkGroupStatsReqDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dto/req/ShortLinkStatsAccessRecordReqDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dto/req/ShortLinkStatsReqDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dto/resp/ShortLinkStatsAccessDailyRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dto/resp/ShortLinkStatsAccessRecordRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dto/resp/ShortLinkStatsBrowserRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dto/resp/ShortLinkStatsDeviceRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dto/resp/ShortLinkStatsLocaleCNRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dto/resp/ShortLinkStatsNetworkRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dto/resp/ShortLinkStatsOsRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dto/resp/ShortLinkStatsRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dto/resp/ShortLinkStatsTopIpRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dto/resp/ShortLinkStatsUvRespDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/ShortLinkStatsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/ShortLinkStatsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/ShortLinkRemoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/nageoffer/shortlink/admin/remote/ShortLinkRemoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkAccessLogsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkAccessLogsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkAccessStatsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkAccessStatsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkBrowserStatsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkBrowserStatsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkDeviceStatsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkDeviceStatsMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkLocaleStatsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkLocaleStatsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/ShortLinkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/ShortLinkServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/tookit/LinkUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/tookit/LinkUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkNetworkStatsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkNetworkStatsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkOsStatsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkOsStatsMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,54 +84,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Application.ShortLinkTableShardingTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.UserTableShardingTest.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ShortLinkAdminApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ShortLinkGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ShortLinkProjectApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/nageoffer/shortlink/project/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.ShortLinkTableShardingTest.executor": "Run",
+    "Application.UserTableShardingTest.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ShortLinkAdminApplication.executor": "Run",
+    "Spring Boot.ShortLinkGatewayApplication.executor": "Run",
+    "Spring Boot.ShortLinkProjectApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/nageoffer/shortlink/project/src/main/java/com/nageoffer/shortlink/project/common",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "editor.preferences.import",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\nageoffer\shortlink\project\src\main\java\com\nageoffer\shortlink\project\common" />
       <recent name="D:\nageoffer\shortlink\project\src\main\resources" />
       <recent name="D:\nageoffer\shortlink\admin\src\main\resources" />
       <recent name="D:\nageoffer\shortlink\admin\src\main\java\com\nageoffer\shortlink\admin\remote\dto\resp" />
       <recent name="D:\nageoffer\shortlink\admin\src\main\java\com\nageoffer\shortlink\admin\remote\dto" />
-      <recent name="D:\nageoffer\shortlink\project\src\main\java\com\nageoffer\shortlink\project\common" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.nageoffer.shortlink.project.dao.mapper" />
@@ -207,15 +247,7 @@
       <workItem from="1720746654834" duration="9747000" />
       <workItem from="1720757828146" duration="14925000" />
       <workItem from="1721006121992" duration="22313000" />
-      <workItem from="1721049089466" duration="1014000" />
-    </task>
-    <task id="LOCAL-00009" summary="feature:开发短链接后管分组新增功能">
-      <option name="closed" value="true" />
-      <created>1720508946769</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1720508946769</updated>
+      <workItem from="1721049089466" duration="5493000" />
     </task>
     <task id="LOCAL-00010" summary="feature:开发短链接后管分组集合功能">
       <option name="closed" value="true" />
@@ -601,7 +633,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721049575657</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="feature:开发短链接监控之访问网络功能">
+      <option name="closed" value="true" />
+      <created>1721050118759</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1721050118759</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -620,7 +660,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feature:短链接后管开发短链接修改功能" />
     <MESSAGE value="feature:修改短链接接口网络方法类型" />
     <MESSAGE value="feature:开发短链接跳转功能" />
     <MESSAGE value="feature:短链接跳转原始链接开发缓存穿透功能" />
@@ -645,6 +684,7 @@
     <MESSAGE value="feature:开发短链接监控之浏览器访问数据" />
     <MESSAGE value="feature:开发短链接监控之高频访问IP功能" />
     <MESSAGE value="feature:开发短链接监控之访问设备功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature:开发短链接监控之访问设备功能" />
+    <MESSAGE value="feature:开发短链接监控之访问网络功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature:开发短链接监控之访问网络功能" />
   </component>
 </project>
