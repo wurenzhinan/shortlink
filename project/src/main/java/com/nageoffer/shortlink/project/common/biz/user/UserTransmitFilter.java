@@ -3,8 +3,8 @@ package com.nageoffer.shortlink.project.common.biz.user;
 import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson2.JSON;
 import com.google.common.collect.Lists;
-import com.nageoffer.shortlink.admin.common.convention.exception.ClientException;
-import com.nageoffer.shortlink.admin.common.convention.result.Results;
+import com.nageoffer.shortlink.project.common.convention.exception.ClientException;
+import com.nageoffer.shortlink.project.common.convention.result.Results;
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
@@ -15,7 +15,7 @@ import java.io.PrintWriter;
 import java.util.List;
 import java.util.Objects;
 
-import static com.nageoffer.shortlink.admin.common.enums.UserErrorCodeEnum.USER_TOKEN_FAIL;
+import static com.nageoffer.shortlink.project.common.enums.UserErrorCodeEnum.USER_TOKEN_FAIL;
 
 /**
  * 用户信息传输过滤器
