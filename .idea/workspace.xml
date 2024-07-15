@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2a196d2-3d52-43df-ae99-6685e37f2bb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/entity/LinkDeviceStatsDO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkDeviceStatsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/entity/LinkNetworkStatsDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkNetworkStatsMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3a443c87-7ea0-497f-bfb2-8d4333182f45.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3a443c87-7ea0-497f-bfb2-8d4333182f45.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkLocaleStatsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkLocaleStatsMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/ShortLinkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/ShortLinkServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/tookit/LinkUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/tookit/LinkUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,15 +207,7 @@
       <workItem from="1720746654834" duration="9747000" />
       <workItem from="1720757828146" duration="14925000" />
       <workItem from="1721006121992" duration="22313000" />
-      <workItem from="1721049089466" duration="304000" />
-    </task>
-    <task id="LOCAL-00008" summary="feature:初始化短链接分组功能代码">
-      <option name="closed" value="true" />
-      <created>1720506545820</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1720506545820</updated>
+      <workItem from="1721049089466" duration="1014000" />
     </task>
     <task id="LOCAL-00009" summary="feature:开发短链接后管分组新增功能">
       <option name="closed" value="true" />
@@ -599,7 +593,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721036154492</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="feature:开发短链接监控之访问设备功能">
+      <option name="closed" value="true" />
+      <created>1721049575656</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1721049575657</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -618,7 +620,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feature:短链接服务开发修改功能" />
     <MESSAGE value="feature:短链接后管开发短链接修改功能" />
     <MESSAGE value="feature:修改短链接接口网络方法类型" />
     <MESSAGE value="feature:开发短链接跳转功能" />
@@ -643,6 +644,7 @@
     <MESSAGE value="feature:开发短链接监控之操作系统访问数据" />
     <MESSAGE value="feature:开发短链接监控之浏览器访问数据" />
     <MESSAGE value="feature:开发短链接监控之高频访问IP功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature:开发短链接监控之高频访问IP功能" />
+    <MESSAGE value="feature:开发短链接监控之访问设备功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature:开发短链接监控之访问设备功能" />
   </component>
 </project>

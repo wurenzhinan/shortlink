@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 
 /**
- * 地区统计访问实体
+ * 地区统计监控持久层
  */
 public interface LinkLocaleStatsMapper extends BaseMapper<LinkLocaleStatsDO> {
     /**
