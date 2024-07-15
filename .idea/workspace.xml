@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2a196d2-3d52-43df-ae99-6685e37f2bb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dto/req/RecycleBinRemoveReqDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/controller/RecycleBinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/controller/RecycleBinController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/RecycleBinService.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/RecycleBinService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/RecycleBinServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/RecycleBinServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/entity/LinkAccessStatsDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkAccessStatsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3a443c87-7ea0-497f-bfb2-8d4333182f45.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3a443c87-7ea0-497f-bfb2-8d4333182f45.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/ShortLinkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/ShortLinkServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -91,8 +93,8 @@
       <recent name="D:\nageoffer\shortlink\project\src\main\java\com\nageoffer\shortlink\project\common" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.nageoffer.shortlink.project.dto.req" />
       <recent name="com.nageoffer.shortlink.admin.remote.dto.req" />
+      <recent name="com.nageoffer.shortlink.project.dto.req" />
       <recent name="com.nageoffer.shortlink.admin.controller" />
       <recent name="com.nageoffer.shortlink.project.controller" />
       <recent name="com.nageoffer.shortlink.admin.remote.dto.resp" />
@@ -107,7 +109,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ShortLinkAdminApplication">
+  <component name="RunManager" selected="Spring Boot.ShortLinkProjectApplication">
     <configuration name="ShortLinkTableShardingTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.nageoffer.shortlink.project.test.ShortLinkTableShardingTest" />
       <module name="shortlink-project" />
@@ -175,8 +177,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ShortLinkAdminApplication" />
         <item itemvalue="Spring Boot.ShortLinkProjectApplication" />
+        <item itemvalue="Spring Boot.ShortLinkAdminApplication" />
         <item itemvalue="Application.ShortLinkTableShardingTest" />
         <item itemvalue="Application.UserTableShardingTest" />
         <item itemvalue="Spring Boot.ShortLinkGatewayApplication" />
@@ -202,7 +204,8 @@
       <workItem from="1720596839944" duration="6465000" />
       <workItem from="1720660172285" duration="24172000" />
       <workItem from="1720746654834" duration="9747000" />
-      <workItem from="1720757828146" duration="14592000" />
+      <workItem from="1720757828146" duration="14925000" />
+      <workItem from="1721006121992" duration="10449000" />
     </task>
     <task id="LOCAL-00001" summary="feature:开发全局异常拦截器">
       <option name="closed" value="true" />
@@ -588,7 +591,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720776737539</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="feature:开发从回收站移除短链接功能">
+      <option name="closed" value="true" />
+      <created>1720777279246</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1720777279246</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,7 +607,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feature:优化用户注册重复提示报错" />
     <MESSAGE value="feature:用户短链接分组分表处理" />
     <MESSAGE value="optimize:优化短链接分组查询返回实体" />
     <MESSAGE value="optimize:优化短链接分组包目录" />
@@ -621,6 +631,7 @@
     <MESSAGE value="feature:开发短链接分页查询回收站功能" />
     <MESSAGE value="refactor:重构短链接回收站分页查询功能" />
     <MESSAGE value="feature:恢复短链接功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature:恢复短链接功能" />
+    <MESSAGE value="feature:开发从回收站移除短链接功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature:开发从回收站移除短链接功能" />
   </component>
 </project>
