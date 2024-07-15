@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2a196d2-3d52-43df-ae99-6685e37f2bb9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/entity/LinkLocaleStatsDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/dao/mapper/LinkLocaleStatsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3a443c87-7ea0-497f-bfb2-8d4333182f45.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3a443c87-7ea0-497f-bfb2-8d4333182f45.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/common/constant/ShortLinkConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/common/constant/ShortLinkConstant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/ShortLinkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/ShortLinkServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/tookit/LinkUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/tookit/LinkUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +59,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.ShortLinkAdminApplication.executor": "Run",
     "Spring Boot.ShortLinkGatewayApplication.executor": "Run",
-    "Spring Boot.ShortLinkProjectApplication.executor": "Run",
+    "Spring Boot.ShortLinkProjectApplication.executor": "Debug",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
@@ -106,7 +110,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ShortLinkProjectApplication">
+  <component name="RunManager" selected="Application.ShortLinkTableShardingTest">
     <configuration name="ShortLinkTableShardingTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.nageoffer.shortlink.project.test.ShortLinkTableShardingTest" />
       <module name="shortlink-project" />
@@ -159,26 +163,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShortLinkProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="shortlink-project" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nageoffer.shortlink.project.ShortLinkProjectApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.nageoffer.shortlink.project.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ShortLinkProjectApplication" />
+        <item itemvalue="Spring Boot.ShortLinkGatewayApplication" />
         <item itemvalue="Spring Boot.ShortLinkAdminApplication" />
         <item itemvalue="Application.ShortLinkTableShardingTest" />
         <item itemvalue="Application.UserTableShardingTest" />
-        <item itemvalue="Spring Boot.ShortLinkGatewayApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -202,15 +192,7 @@
       <workItem from="1720660172285" duration="24172000" />
       <workItem from="1720746654834" duration="9747000" />
       <workItem from="1720757828146" duration="14925000" />
-      <workItem from="1721006121992" duration="13355000" />
-    </task>
-    <task id="LOCAL-00003" summary="feature:开发布隆过滤器和注册功能">
-      <option name="closed" value="true" />
-      <created>1720161382820</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1720161382820</updated>
+      <workItem from="1721006121992" duration="18488000" />
     </task>
     <task id="LOCAL-00004" summary="feature:通过分布式锁完善用户注册功能，防止短时间恶意请求。">
       <option name="closed" value="true" />
@@ -596,7 +578,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721026312350</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="feature:开发短链接监控之基础访问UIP数据">
+      <option name="closed" value="true" />
+      <created>1721027508379</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1721027508379</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,7 +605,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="optimize:优化短链接分组包目录" />
     <MESSAGE value="optimize:短链接分组列表查询短链接数量" />
     <MESSAGE value="optimize:注册用户后创建默认分组" />
     <MESSAGE value="feature:注册用户后创建默认分组" />
@@ -640,6 +629,18 @@
     <MESSAGE value="feature:开发从回收站移除短链接功能" />
     <MESSAGE value="feature:开发短链接监控之基础访问PV数据" />
     <MESSAGE value="feature:开发短链接监控之基础访问UV数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature:开发短链接监控之基础访问UV数据" />
+    <MESSAGE value="feature:开发短链接监控之基础访问UIP数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature:开发短链接监控之基础访问UIP数据" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/project/src/main/java/com/nageoffer/shortlink/project/service/impl/ShortLinkServiceImpl.java</url>
+          <line>358</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
